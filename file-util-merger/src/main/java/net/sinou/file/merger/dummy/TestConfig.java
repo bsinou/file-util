@@ -13,5 +13,6 @@ public class TestConfig {
 
 		log.info("ClassPath: ");
 		Arrays.stream(System.getProperty("java.class.path").split(":")).forEach(System.out::println);
+		
 	}
 }

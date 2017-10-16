@@ -1,7 +1,6 @@
 package net.sinou.file.merger.domain;
 
 import java.util.Arrays;
-import java.util.Date;
 
 /** Useful file info to enable later merging */
 public class FileInfo {
@@ -9,13 +8,13 @@ public class FileInfo {
 	private long fileId;
 	private String fileName;
 	private String filePath;
-	private Date fileCreated;
-	private String fileCreatedBy;
-	private Date fileLastModified;
+	private long created;
+	private long lastModified;
+	private String owner;
+	private long size;
 	private byte[] fileMd5;
 
 	public FileInfo() {
-
 	}
 
 	public long getFileId() {
@@ -42,28 +41,28 @@ public class FileInfo {
 		this.filePath = filePath;
 	}
 
-	public Date getFileCreated() {
-		return fileCreated;
+	public void setCreated(long created) {
+		this.created = created;
 	}
 
-	public void setFileCreated(Date fileCreated) {
-		this.fileCreated = fileCreated;
+	public long getCreated() {
+		return created;
 	}
 
-	public String getFileCreatedBy() {
-		return fileCreatedBy;
+	public long getLastModified() {
+		return lastModified;
 	}
 
-	public void setFileCreatedBy(String fileCreatedBy) {
-		this.fileCreatedBy = fileCreatedBy;
+	public void setLastModified(long lastModified) {
+		this.lastModified = lastModified;
 	}
 
-	public Date getFileLastModified() {
-		return fileLastModified;
+	public String getOwner() {
+		return owner;
 	}
 
-	public void setFileLastModified(Date fileLastModified) {
-		this.fileLastModified = fileLastModified;
+	public void setOwner(String owner) {
+		this.owner = owner;
 	}
 
 	public byte[] getFileMd5() {
@@ -72,6 +71,14 @@ public class FileInfo {
 
 	public void setFileMd5(byte[] fileMd5) {
 		this.fileMd5 = fileMd5;
+	}
+
+	public void setSize(long size) {
+		this.size = size;
+	}
+
+	public long getSize() {
+		return size;
 	}
 
 	@Override

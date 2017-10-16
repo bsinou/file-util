@@ -3,7 +3,7 @@ def LOG_PATH="logs"
 
 appender("Console-Appender", ConsoleAppender) {
     encoder(PatternLayoutEncoder) {
-        pattern = "%msg%n"
+        pattern = "%C{15} - %msg%n"
     }
 }
 
@@ -19,4 +19,4 @@ appender("File-Appender", FileAppender) {
 logger("net.sinou",DEBUG,["File-Appender", "Console-Appender"])
 logger("org.springframework",INFO,["File-Appender", "Console-Appender"])
 
-root(INFO,["Console-Appender"])
+// root(INFO,["Console-Appender"])
