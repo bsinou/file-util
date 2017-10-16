@@ -11,10 +11,18 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
+/**
+ * Simple configuration for tests with in memory DB. The data structure is
+ * cleaned at each start.
+ * 
+ * Not that the creation of the data source is not very clean: the dataSource()
+ * method is called twice on setup and the creation scripts are called 2 times
+ * by the batch framework causing useless overhead.
+ */
 @EnableBatchProcessing
 @Profile("default")
 @PropertySource("classpath:testData.properties")
-public class SimpleInfrastructureConfiguration implements InfrastructureConfiguration {
+public class TestInfrastructureConfiguration implements InfrastructureConfiguration {
 
 	@Value("${data.batch.clean}")
 	private String batchClean;

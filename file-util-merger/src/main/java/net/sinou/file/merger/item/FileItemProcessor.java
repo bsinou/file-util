@@ -7,8 +7,6 @@ import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileOwnerAttributeView;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
 
 import net.sinou.file.merger.domain.FileInfo;
@@ -20,7 +18,7 @@ import net.sinou.file.util.DigestUtils;
  */
 public class FileItemProcessor implements ItemProcessor<File, FileInfo> {
 
-	private static final Logger log = LoggerFactory.getLogger(FileItemProcessor.class);
+	// final Logger log = LoggerFactory.getLogger(FileItemProcessor.class);
 
 	@Override
 	public FileInfo process(final File file) throws Exception {

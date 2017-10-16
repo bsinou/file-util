@@ -17,9 +17,7 @@ public class DirReader implements ItemReader<File> {
 		File baseFile = basePath.toFile();
 		if (!baseFile.exists() || !baseFile.isDirectory())
 			throw new IllegalArgumentException();
-
 		files = baseFile.listFiles();
-
 	}
 
 	@Override

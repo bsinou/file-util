@@ -20,14 +20,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 import net.sinou.file.merger.configuration.InfrastructureConfiguration;
-import net.sinou.file.merger.configuration.SimpleInfrastructureConfiguration;
+import net.sinou.file.merger.configuration.TestInfrastructureConfiguration;
 import net.sinou.file.merger.domain.FileInfo;
 import net.sinou.file.merger.item.DirReader;
 import net.sinou.file.merger.item.FileItemProcessor;
 import net.sinou.file.merger.listener.BasicListener;
 
 @Configuration
-@Import({ SimpleInfrastructureConfiguration.class })
+@Import({ TestInfrastructureConfiguration.class })
 public class ImportFileInfoBatchConfiguration {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
