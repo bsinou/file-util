@@ -45,20 +45,25 @@ dependencies {
 		// JPA Provider 
 		"org.hibernate:hibernate-entitymanager",
 		// Spring
-		"org.springframework.data:spring-data-jpa",
 		"org.springframework:spring-context-support",
-		"org.springframework:spring-webmvc",
-		"org.springframework:spring-oxm",
+		"org.springframework:spring-jdbc",
+		// "org.springframework.data:spring-data-jpa",
+		// "org.springframework:spring-webmvc",
+		// "org.springframework:spring-oxm",
 		// Spring Batch
 		"org.springframework.batch:spring-batch-core",
 		// Logging
     	"ch.qos.logback:logback-classic",
+    	"org.slf4j:jcl-over-slf4j",
     	// Config: Yaml parsing
-    	"org.yaml:snakeyaml",
+    	// "org.yaml:snakeyaml",
     	
     	// should be provided 
-		"javax.servlet:javax.servlet-api",
-        "junit:junit"
+		// "javax.servlet:javax.servlet-api",
+	)
+
+	testCompile (
+	        "junit:junit"
 	)
 
     runtime(
